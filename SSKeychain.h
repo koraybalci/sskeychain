@@ -166,7 +166,7 @@ extern NSString *const kSSKeychainWhereKey;
  
  @see passwordForService:account:error:
  */
-+ (NSString *)passwordForService:(NSString *)serviceName account:(NSString *)account;
++ (NSString *)passwordForService:(NSString *)serviceName account:(NSString *)account group:(NSString *)group;
 
 /**
  Returns a string containing the password for a given account and service, or `nil` if the Keychain doesn't have a
@@ -183,7 +183,7 @@ extern NSString *const kSSKeychainWhereKey;
  
  @see passwordForService:account:
  */
-+ (NSString *)passwordForService:(NSString *)serviceName account:(NSString *)account error:(NSError **)error;
++ (NSString *)passwordForService:(NSString *)serviceName account:(NSString *)account group:(NSString *)group error:(NSError **)error;
 
 /**
  Returns the password data for a given account and service, or `nil` if the Keychain doesn't have data 
@@ -200,7 +200,7 @@ extern NSString *const kSSKeychainWhereKey;
  
  @see passwordDataForService:account:error:
  */
-+ (NSData *)passwordDataForService:(NSString *)serviceName account:(NSString *)account;
++ (NSData *)passwordDataForService:(NSString *)serviceName account:(NSString *)account group:(NSString *)group;
 
 /**
  Returns the password data for a given account and service, or `nil` if the Keychain doesn't have data 
@@ -217,7 +217,7 @@ extern NSString *const kSSKeychainWhereKey;
  
  @see passwordDataForService:account:
  */
-+ (NSData *)passwordDataForService:(NSString *)serviceName account:(NSString *)account error:(NSError **)error;
++ (NSData *)passwordDataForService:(NSString *)serviceName account:(NSString *)account group:(NSString *)group error:(NSError **)error;
 
 
 ///-------------------------
@@ -235,7 +235,7 @@ extern NSString *const kSSKeychainWhereKey;
  
  @see deletePasswordForService:account:error:
  */
-+ (BOOL)deletePasswordForService:(NSString *)serviceName account:(NSString *)account;
++ (BOOL)deletePasswordForService:(NSString *)serviceName account:(NSString *)account group:(NSString *)group;
 
 /**
  Deletes a password from the Keychain.
@@ -250,7 +250,7 @@ extern NSString *const kSSKeychainWhereKey;
  
  @see deletePasswordForService:account:
  */
-+ (BOOL)deletePasswordForService:(NSString *)serviceName account:(NSString *)account error:(NSError **)error;
++ (BOOL)deletePasswordForService:(NSString *)serviceName account:(NSString *)account group:(NSString *)group error:(NSError **)error;
 
 
 ///------------------------
@@ -270,7 +270,7 @@ extern NSString *const kSSKeychainWhereKey;
  
  @see setPassword:forService:account:error:
  */
-+ (BOOL)setPassword:(NSString *)password forService:(NSString *)serviceName account:(NSString *)account;
++ (BOOL)setPassword:(NSString *)password forService:(NSString *)serviceName account:(NSString *)account group:(NSString *)group;
 
 /**
  Sets a password in the Keychain.
@@ -287,7 +287,7 @@ extern NSString *const kSSKeychainWhereKey;
  
  @see setPassword:forService:account:
  */
-+ (BOOL)setPassword:(NSString *)password forService:(NSString *)serviceName account:(NSString *)account error:(NSError **)error;
++ (BOOL)setPassword:(NSString *)password forService:(NSString *)serviceName account:(NSString *)account group:(NSString *)group error:(NSError **)error;
 
 /**
  Sets arbirary data in the Keychain.
@@ -304,7 +304,7 @@ extern NSString *const kSSKeychainWhereKey;
  
  @see setPasswordData:forService:account:error:
  */
-+ (BOOL)setPasswordData:(NSData *)password forService:(NSString *)serviceName account:(NSString *)account;
++ (BOOL)setPasswordData:(NSData *)password forService:(NSString *)serviceName account:(NSString *)account group:(NSString *)group;
 
 /**
  Sets arbirary data in the Keychain.
@@ -321,7 +321,7 @@ extern NSString *const kSSKeychainWhereKey;
  
  @see setPasswordData:forService:account:
  */
-+ (BOOL)setPasswordData:(NSData *)password forService:(NSString *)serviceName account:(NSString *)account error:(NSError **)error;
++ (BOOL)setPasswordData:(NSData *)password forService:(NSString *)serviceName account:(NSString *)account group:(NSString *)group error:(NSError **)error;
 
 
 ///--------------------
